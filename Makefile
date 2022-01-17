@@ -48,14 +48,14 @@ MAKE = make
 endif
 
 ifeq ($(PLATFORM),PC)
-LINUX_SRC = /lib/modules/$(shell uname -r)/build
-LINUX_SRC_MODULE = /lib/modules/$(KVER)/kernel/drivers/net/wireless/
-CROSS_COMPILE = 
-ARCH =
-#LINUX_SRC = /home/cronyx/openipc/firmware/output/build/linux-3.0.8
-#CROSS_COMPILE = /home/cronyx/openipc/firmware/output/host/bin/arm-openipc-linux-musleabi-
-#ARCH:=arm
-#export $ARCH
+#LINUX_SRC = /lib/modules/$(shell uname -r)/build
+#LINUX_SRC_MODULE = /lib/modules/$(KVER)/kernel/drivers/net/wireless/
+#CROSS_COMPILE = 
+#ARCH =
+LINUX_SRC = /home/cronyx/openipc/firmware/output/build/linux-3.0.8
+CROSS_COMPILE = /home/cronyx/openipc/firmware/output/host/bin/arm-openipc-linux-musleabi-
+ARCH:=arm
+export $ARCH
 endif
 
 export ARCH KVER OSABL RT28xx_DIR RT28xx_MODE LINUX_SRC CROSS_COMPILE CROSS_COMPILE_INCLUDE PLATFORM RELEASE CHIPSET MODULE RTMP_SRC_DIR LINUX_SRC_MODULE TARGET HAS_WOW_SUPPORT
